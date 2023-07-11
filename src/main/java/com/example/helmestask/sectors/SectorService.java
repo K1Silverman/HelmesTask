@@ -14,13 +14,13 @@ public class SectorService {
   @Resource
   private SectorsRepository sectorsRepository;
 
-  public List<List<SectorDto>> getSectors() {
+  @Resource
+  private SectorsMapper sectorsMapper;
 
-    List<Sector> sector = sectorsRepository.findAll();
+  public List<SectorDto> getSectors() {
 
-    // TODO: Tee siia meetod, mis viiks kokku parentid childidega ja lõpuks paneks
-    // Listi
+    List<SectorDto> sectors = sectorsMapper.toDtos(sectorsRepository.findAll());
 
-    return null;
-  }
+    return sectors;
+  };
 }

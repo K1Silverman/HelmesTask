@@ -23,6 +23,7 @@ CREATE TABLE sectors (
     id int  NOT NULL,
     sectorName varchar(100) NOT NULL,
     parent_id int,
+    level int,
     CONSTRAINT sectors_pk PRIMARY KEY (id)
 );
 

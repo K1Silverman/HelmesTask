@@ -17,4 +17,7 @@ public class Sector {
 
   @JoinColumn(name = "parent_id")
   private Integer parent_id;
+
+  @Column(name = "level", nullable = false)
+  private Integer level;
 }
