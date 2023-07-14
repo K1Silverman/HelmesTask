@@ -4,7 +4,7 @@
 -- tables
 -- Table: form
 CREATE TABLE form (
-    id int  NOT NULL,
+    id serial  NOT NULL,
     name varchar(100)  NOT NULL,
     terms boolean  NOT NULL,
     CONSTRAINT form_pk PRIMARY KEY (id)
@@ -12,7 +12,7 @@ CREATE TABLE form (
 
 -- Table: selected_sectors
 CREATE TABLE selected_sectors (
-    id int  NOT NULL,
+    id serial  NOT NULL,
     form_id int  NOT NULL,
     sector_id int  NOT NULL,
     CONSTRAINT selected_sectors_pk PRIMARY KEY (id)

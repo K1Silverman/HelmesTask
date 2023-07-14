@@ -2,8 +2,6 @@ package com.example.helmestask.sectors;
 
 import java.util.List;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,4 +21,5 @@ public class SectorsController {
   public List<SectorDto> getSectors() {
     return sectorService.getSectors();
   }
+
 }
